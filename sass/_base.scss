@@ -1,0 +1,105 @@
+//////////////////////////////////////////////
+
+.btn:hover{
+    opacity: $opacity;
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Kiwi Maru';
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fff;
+    color: $color-text;
+    // padding: 0 $padding-pc;
+}
+
+a{
+    text-decoration: none;
+    color: #707070;
+
+    &:hover{
+        text-decoration: none;
+        color: cadetblue;
+    }
+}
+
+.container{
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 2;
+
+    @include media(sp) {
+		padding-left: $padding-sm;
+		padding-right: $padding-sm;
+	}
+}
+
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .section{
+    max-width: 100%;
+    padding: 100px 0 120px;
+    z-index: 90;
+    
+  }
+
+  .section_title{
+    font-family: 'Kiwi Maru';
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 95;
+}
+
+.section_subTitle{
+    text-align: center;
+    padding-bottom: 80px;
+}
+   
+
+.text_bold{
+    font-weight: bold;
+}
+
+
+
+.title{
+    text-align: center;
+    
+}
+
+li{
+    list-style: none;
+}
+
+.is-pc {
+    display: block;
+    // @include media(tab) {
+    //   display: none;
+    // }
+    @include media(sp) {
+      display: none;
+    }
+  }
+
+  .is-tab {
+    display: none;
+    @include media(tab) {
+      display: block;
+    }
+  }
+  
+  .is-sp {
+    display: none;
+    @include media(sp) {
+      display: block;
+    }
+  }

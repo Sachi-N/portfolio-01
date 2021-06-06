@@ -1,0 +1,65 @@
+/*****************************************************************************
+ブレイクポイント
+*****************************************************************************/
+
+// ブレイクポイントを設定
+$bp-pc: 1479px; //1480未満
+// $bp-tab: 959px; //960px未満
+$bp-sp: 767px; //768未満
+$bp-mo: 419px; //420未満
+
+// メディアクエリ用のミックスイン
+@mixin media($media-width) {
+	@if $media-width == pc {
+		@media only screen and (max-width: $bp-pc), print {
+			@content;
+		}
+	} 
+	// @else if $media-width == tab {
+	// 	@media only screen and (max-width: $bp-tab), print {
+	// 		@content;
+	// 	}
+	// } 
+	@else if $media-width == sp {
+		@media only screen and (max-width: $bp-sp), print {
+			@content;
+		}
+	} @else if $media-width == mo {
+		@media only screen and (max-width: $bp-mo), print {
+			@content;
+		}
+	}
+}
+
+/*===========================================================
+# colors
+===========================================================*/
+
+//色
+
+$color-main: #ffc8a5;
+$color-accent: #fec8c9;
+$color-text: #333333;
+$color-card: #7f9eb2;
+$color-background: #fffdf2;
+$font-color-white: white;
+$opacity: 0.9;
+
+
+/*===========================================================
+# common - 全体に共通するスタイル
+===========================================================*/
+
+
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// 余白
+$padding-md: 24px;
+$padding-sm: 16px;
+
+//フォント
+$font-en:'Playfair Display', serif;
+$font-ja:'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+
