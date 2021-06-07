@@ -118,7 +118,7 @@
             <h2 class="about__contents__title section_title wow fadeInUp">About</h2>
             <h5 class="about__contents__subTitle section_subTitle wow fadeInUp">- ご挨拶 -</h5>
             <div class="about__contents__me row container-fluid">
-                <div class="about__contents__me__left  row fadeInLeft wow col-md-6 col-12">
+                <div class="about__contents__me__left fadeInLeft wow col-md-6 col-12">
                     <div class="about__contents__me__left__bg"></div>
                     <div class="about__contents__img">
                         <img src="<?= get_theme_file_uri() ?>/img/about2.jpg" alt="作者の画像">
@@ -152,7 +152,9 @@
                 </div>
                 <div class="about__contents__me__right wow fadeInRight col-md-6 col-12">
                     <div class="about__contents__me__right__text">
-                        <p>”つながりが、人の幸せをつくる”を信条に、<br>お客様の伝えたい思いやサービスの魅力が余すところ無く届くよう、<br>心を込めてWebサイトをお作りします。</p>
+                        <span>”つながりが、人の幸せをつくる”を信条に、</span>
+                        <span>お客様の伝えたい思いやサービスの魅力が余すところ無く届くよう、</span>
+                        <span>心を込めてWebサイトをお作りします。</span>
                     </div>
                     
                 </div>

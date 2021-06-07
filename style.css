@@ -75,22 +75,35 @@ a:hover {
 
 .section {
   max-width: 100%;
-  padding: 100px 0 120px;
+  padding: 10vw 0;
   z-index: 90;
 }
 
 .section_title {
   font-family: 'Kiwi Maru';
-  font-size: 48px;
+  font-size: 4vw;
   font-weight: bold;
   text-align: center;
   position: relative;
   z-index: 95;
 }
 
+@media only screen and (max-width: 767px), print {
+  .section_title {
+    font-size: 6vw;
+  }
+}
+
 .section_subTitle {
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 10vw;
+  font-size: 2vw;
+}
+
+@media only screen and (max-width: 767px), print {
+  .section_subTitle {
+    font-size: 4vw;
+  }
 }
 
 .text_bold {
@@ -528,17 +541,25 @@ About
   }
 }
 
-.about .about__contents__me__left {
+.about .container-fluid {
+  padding: 0;
+}
+
+.about .about__contents__me {
+  margin-bottom: 10vw;
+}
+
+.about .about__contents__me .about__contents__me__left {
   background: #f8f9fa;
 }
 
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__left {
+  .about .about__contents__me .about__contents__me__left {
     height: 56vw;
   }
 }
 
-.about .about__contents__me__left .about__contents__img {
+.about .about__contents__me .about__contents__me__left .about__contents__img {
   position: relative;
   height: 27vw;
   width: 30vw;
@@ -548,7 +569,7 @@ About
 }
 
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__left .about__contents__img {
+  .about .about__contents__me .about__contents__me__left .about__contents__img {
     height: 29vw;
     width: 60vw;
     top: -5vw;
@@ -556,17 +577,17 @@ About
   }
 }
 
-.about .about__contents__me__left .about__contents__img img {
+.about .about__contents__me .about__contents__me__left .about__contents__img img {
   border: #fff .5vw solid;
 }
 
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__left .about__contents__img img {
+  .about .about__contents__me .about__contents__me__left .about__contents__img img {
     border: #fff 2vw solid;
   }
 }
 
-.about .about__contents__me__left .about__contents__name {
+.about .about__contents__me .about__contents__me__left .about__contents__name {
   position: absolute;
   top: 28vw;
   left: 30vw;
@@ -575,14 +596,14 @@ About
 }
 
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__left .about__contents__name {
+  .about .about__contents__me .about__contents__me__left .about__contents__name {
     top: 46vw;
     left: 34vw;
     font-size: 3vw;
   }
 }
 
-.about .about__contents__me__left__bg {
+.about .about__contents__me .about__contents__me__left__bg {
   position: absolute;
   top: 8vw;
   left: 23vw;
@@ -596,7 +617,7 @@ About
 }
 
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__left__bg {
+  .about .about__contents__me .about__contents__me__left__bg {
     width: 58vw;
     height: 36vw;
     left: 19vw;
@@ -604,11 +625,11 @@ About
   }
 }
 
-.about .about__contents__me__right {
+.about .about__contents__me .about__contents__me__right {
   position: relative;
 }
 
-.about .about__contents__me__right .about__contents__me__right__text {
+.about .about__contents__me .about__contents__me__right .about__contents__me__right__text {
   position: absolute;
   top: 7vw;
   left: 11vw;
@@ -616,8 +637,12 @@ About
   line-height: 3;
 }
 
+.about .about__contents__me .about__contents__me__right .about__contents__me__right__text span {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 767px), print {
-  .about .about__contents__me__right .about__contents__me__right__text {
+  .about .about__contents__me .about__contents__me__right .about__contents__me__right__text {
     text-align: center;
     font-size: 2.5vw;
   }
@@ -716,6 +741,9 @@ Work
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height: 100%;
+  width: 100%;
+  -webkit-box-shadow: 10px 10px 15px -10px;
+          box-shadow: 10px 10px 15px -10px;
 }
 
 .work__contents__itemList__item img:hover {
@@ -891,7 +919,11 @@ Contact
 
 .contact .form-item {
   margin-bottom: 15px;
-  width: 85%;
+  width: 100%;
+}
+
+.contact .form-item label {
+  width: 100%;
 }
 
 .contact .wpcf7 input[name="your-name"] {
@@ -930,6 +962,16 @@ Contact
   color: #fff;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+@media only screen and (max-width: 767px), print {
+  .contact .wpcf7-submit {
+    padding: 3vw 15vw;
+  }
+}
+
+.contact .ajax-loader {
+  display: block;
 }
 
 .contact img.contact-img {

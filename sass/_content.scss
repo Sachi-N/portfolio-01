@@ -434,142 +434,158 @@ About
        height: 142vw;
      }
 
-    .about__contents__me__left{
-        background:  #f8f9fa;
+     .container-fluid{
+         padding: 0;
+     }
 
-        @include media(sp) {
-          height: 56vw;
+     .about__contents__me{
 
-          }
-      
-        .about__contents__img{
-            position: relative;
-            height: 27vw;
-            width: 30vw;
-            top: 3vw;
-            left: 25vw;
-            z-index: 50;
+        margin-bottom: 10vw;
 
+        .about__contents__me__left{
+            background:  #f8f9fa;
+    
             @include media(sp) {
-                height: 29vw;
-                width: 60vw;
-                top: -5vw;
-                left: 20vw;
+              height: 56vw;
+    
               }
-
-            img{
-                border: #fff .5vw solid;
-
+          
+            .about__contents__img{
+                position: relative;
+                height: 27vw;
+                width: 30vw;
+                top: 3vw;
+                left: 25vw;
+                z-index: 50;
+    
                 @include media(sp) {
-                    border: #fff 2vw solid;
-
+                    height: 29vw;
+                    width: 60vw;
+                    top: -5vw;
+                    left: 20vw;
+                  }
+    
+                img{
+                    border: #fff .5vw solid;
+    
+                    @include media(sp) {
+                        border: #fff 2vw solid;
+    
+                      }
+                }
+        
+            }
+    
+    
+            .about__contents__name{
+                position: absolute;
+                top: 28vw;
+                left: 30vw;
+                line-height: 3;
+                font-size: 1.5vw;
+    
+    
+                @include media(sp) {
+                    top: 46vw;
+                    left: 34vw;
+                    font-size: 3vw;
+                  }
+               
+                // &--more{
+                //     padding: 1vw 2vw;
+                //     position: relative;
+    
+                //     &:hover &--hide{
+                //         display: inline;
+                //     }
+    
+                //     &--hide{
+                //         position   : absolute;                /* 親要素を基準 */
+                //         display: none;                        /* 要素を非表示 */
+                //         padding: 2px;                         /* テキストの前後の余白 */
+                //         background-color: rgba(102, 102, 255, 0.50);       /* 背景色（透明度） */
+                //         width:180px;                          /* 吹き出し全体の幅 */
+                //         left : -1%;                           /* 表示位置 */
+                //         font-size: 80%;                       /* 文字サイズ */
+    
+                //         &:after{
+                //             border-left: 12px solid rgba(102, 102, 255, 0.50);   /* 吹き出し口の幅・色 */
+                //             border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
+                //             border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
+                //             right: -12px;                           /* 吹き出し口の位置調整 */
+                //             top: 5%;                                /* 吹き出し口の縦位置 */
+                //             content: "";                       /* コンテンツの挿入 */
+                //             position: absolute;                /* 親要素を基準 */
+                //           }
+                //     }
+    
+                }
+    
+           
+            }
+    
+            .about__contents__me__left__bg{
+                position: absolute;
+                top: 8vw;
+                left: 23vw;
+                width: 25vw;
+                height: 18vw;
+                opacity: 0.8;
+                background-color: #707070;
+                background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #dee2e6), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #dee2e6),color-stop(.75, #dee2e6), color-stop(.75, transparent),to(transparent));
+                -webkit-background-size: 7px 7px;
+                z-index: 40;
+    
+                @include media(sp) {
+                    width: 58vw;
+                    height: 36vw;
+                    left: 19vw;
+                    top: 6vw;
+                  
                   }
             }
+        
     
-        }
-
-
-        .about__contents__name{
-            position: absolute;
-            top: 28vw;
-            left: 30vw;
-            line-height: 3;
-            font-size: 1.5vw;
-
-
-            @include media(sp) {
-                top: 46vw;
-                left: 34vw;
-                font-size: 3vw;
-              }
-           
-            // &--more{
-            //     padding: 1vw 2vw;
-            //     position: relative;
-
-            //     &:hover &--hide{
-            //         display: inline;
-            //     }
-
-            //     &--hide{
-            //         position   : absolute;                /* 親要素を基準 */
-            //         display: none;                        /* 要素を非表示 */
-            //         padding: 2px;                         /* テキストの前後の余白 */
-            //         background-color: rgba(102, 102, 255, 0.50);       /* 背景色（透明度） */
-            //         width:180px;                          /* 吹き出し全体の幅 */
-            //         left : -1%;                           /* 表示位置 */
-            //         font-size: 80%;                       /* 文字サイズ */
-
-            //         &:after{
-            //             border-left: 12px solid rgba(102, 102, 255, 0.50);   /* 吹き出し口の幅・色 */
-            //             border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
-            //             border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
-            //             right: -12px;                           /* 吹き出し口の位置調整 */
-            //             top: 5%;                                /* 吹き出し口の縦位置 */
-            //             content: "";                       /* コンテンツの挿入 */
-            //             position: absolute;                /* 親要素を基準 */
-            //           }
-            //     }
-
-            }
-
-       
-        }
-
-        .about__contents__me__left__bg{
-            position: absolute;
-            top: 8vw;
-            left: 23vw;
-            width: 25vw;
-            height: 18vw;
-            opacity: 0.8;
-            background-color: #707070;
-            background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #dee2e6), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #dee2e6),color-stop(.75, #dee2e6), color-stop(.75, transparent),to(transparent));
-            -webkit-background-size: 7px 7px;
-            z-index: 40;
-
-            @include media(sp) {
-                width: 58vw;
-                height: 36vw;
-                left: 19vw;
-                top: 6vw;
-              
-              }
-        }
-    
-
-    .about__contents__me__right{
-        position: relative;
-      
-        .about__contents__me__right__text{
-            position: absolute;
-            top: 7vw;
-            left: 11vw;
-            font-size: 1.2vw;
-            line-height: 3;
-
-            @include media(sp) {
-               
-                text-align: center;
-                font-size: 2.5vw;
-            
-              }
-    
-        }
-
-
-        // .about__contents__me__right__bg{
-        //     position: absolute;
-        //     top: 4vw;
-        //     left: 20vw;
-        //     width: 34vw;
-        //     height: 28vw;
-           
-        //     background-color: #f8f9fa;
+        .about__contents__me__right{
+            position: relative;
           
-        //     z-index: 40;
-        // }
-    }
+            .about__contents__me__right__text{
+                position: absolute;
+                top: 7vw;
+                left: 11vw;
+                font-size: 1.2vw;
+                line-height: 3;
+
+                span{
+                    display: inline-block;
+                }
+    
+                @include media(sp) {
+                   
+                    text-align: center;
+                    font-size: 2.5vw;
+                
+                  }
+        
+            }
+    
+    
+            // .about__contents__me__right__bg{
+            //     position: absolute;
+            //     top: 4vw;
+            //     left: 20vw;
+            //     width: 34vw;
+            //     height: 28vw;
+               
+            //     background-color: #f8f9fa;
+              
+            //     z-index: 40;
+            // }
+        }
+
+     }
+
+   
 }
 
 /*****************************************************************************
@@ -671,6 +687,8 @@ Work
                 position: relative;
                 height: 22vw;
                 margin-bottom: 3.5vw;
+               
+             
 
                 @include media(sp) {
                   height: 50vw;
@@ -684,6 +702,8 @@ Work
                     opacity: 1;
                     transition: 0.3s;
                     height: 100%;
+                    width: 100%;
+                    box-shadow: 10px 10px 15px -10px;
 
                     &:hover {
                         opacity: 0.5;
@@ -885,7 +905,11 @@ Contact
     
     .form-item{
         margin-bottom: 15px;
-        width: 85%;
+        width: 100%;
+
+        label{
+            width: 100%;
+        }
     }
 
     .wpcf7 input[name="your-name"] { /* 名前入力欄 */
@@ -915,6 +939,14 @@ Contact
             transition: .2s;
         }
 
+        @include media(sp) {
+            padding: 3vw 15vw;
+         }
+
+    }
+
+    .ajax-loader{
+        display: block;
     }
    
     

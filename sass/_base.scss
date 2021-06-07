@@ -45,23 +45,33 @@ a{
 
   .section{
     max-width: 100%;
-    padding: 100px 0 120px;
+    padding: 10vw 0;
     z-index: 90;
     
   }
 
   .section_title{
     font-family: 'Kiwi Maru';
-    font-size: 48px;
+    font-size: 4vw;
     font-weight: bold;
     text-align: center;
     position: relative;
     z-index: 95;
+
+
+    @include media(sp) {
+     font-size: 6vw;
+    }
 }
 
 .section_subTitle{
     text-align: center;
-    padding-bottom: 80px;
+    padding-bottom: 10vw;
+    font-size: 2vw;
+
+    @include media(sp) {
+      font-size: 4vw;
+     }
 }
    
 
